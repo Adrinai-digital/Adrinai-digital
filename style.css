@@ -34,22 +34,35 @@ nav a {
   color: white;
   text-decoration: none;
 }
-
 .hero {
-  background-image: url('images/adrinai_digital.png'); 
-  background-color: red;/* ← cambia esto por tu imagen */
-  background-size: cover;
+  background-image: url('images/adrinai_digital.png');
+  background-size: cover;              /* Mantiene cobertura total */
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  padding: 4rem 0;
-  text-align: center;
-  min-height: 100vh; /* opcional: asegura que cubra toda la pantalla */
+  height: 60vh;                        /* Cambia de 100vh a 60vh */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  position: relative;
 }
+
+/* Opcional: fondo oscuro semitransparente para el texto */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);      /* Fondo oscuro encima de la imagen */
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;                          /* Asegura que el texto esté encima del overlay */
+}
+
 
 .servicios, .portafolio, .contacto {
   padding: 3rem 0;

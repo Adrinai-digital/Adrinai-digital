@@ -153,3 +153,89 @@ iframe {
 .boton-enviar:hover {
   background-color: #1e40af;
 }
+/* FORM MODERNO */
+.formulario-contacto {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 2rem auto 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-contacto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.form-grupo {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: none;
+  outline: none;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+}
+
+.form-grupo label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 0.25rem;
+  color: #6b7280;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+/* Animación flotante del label */
+.form-grupo input:focus + label,
+.form-grupo input:not(:placeholder-shown) + label,
+.form-grupo textarea:focus + label,
+.form-grupo textarea:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: #2563eb;
+}
+
+/* Focus en inputs */
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Botón */
+.boton-enviar {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+

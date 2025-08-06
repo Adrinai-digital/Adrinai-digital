@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: rgba(17, 24, 39, 0.85); /* var(--primary) con 85% opacidad */
+  background: rgba(17, 24, 39, 0.40); /* var(--primary) con 85% opacidad */
   color: white;
   padding: 1rem 0;
   position: fixed;

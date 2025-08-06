@@ -83,6 +83,7 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -101,158 +102,24 @@ iframe {
   margin-top: 1rem;
   border-radius: 10px;
 }
-.formulario-contacto {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin: 2rem auto 0;
-}
 
-.form-grupo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
-}
-
-.form-grupo label {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #1f2937;
-}
-
-.form-grupo input,
-.form-grupo textarea {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-  transition: border 0.3s ease;
-  resize: vertical;
-}
-
-.form-grupo input:focus,
-.form-grupo textarea:focus {
-  border-color: #2563eb;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-.boton-enviar {
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.boton-enviar:hover {
-  background-color: #1e40af;
-}
-/* FORM MODERNO */
-.formulario-contacto {
-  background-color: rgb(235, 174, 213);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  max-width: 600px;
-  margin: 2rem auto 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.formulario-contacto:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-.form-grupo {
-  position: relative;
-  margin-bottom: 1.8rem;
-}
-
-.form-grupo input,
-.form-grupo textarea {
-  width: 100%;
-  padding: 1rem 1rem 1rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: none;
-  outline: none;
-}
-
-.form-grupo textarea {
-  resize: vertical;
-}
-
-.form-grupo label {
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  background: white;
-  padding: 0 0.25rem;
-  color: #6b7280;
-  font-size: 1rem;
-  pointer-events: none;
-  transition: 0.3s ease all;
-}
-
-/* Animación flotante del label */
-.form-grupo input:focus + label,
-.form-grupo input:not(:placeholder-shown) + label,
-.form-grupo textarea:focus + label,
-.form-grupo textarea:not(:placeholder-shown) + label {
-  top: -0.6rem;
-  left: 0.8rem;
-  font-size: 0.8rem;
-  color: #2563eb;
-}
-
-/* Focus en inputs */
-.form-grupo input:focus,
-.form-grupo textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-/* Botón */
-.boton-enviar {
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.boton-enviar:hover {
-  background-color: #1e40af;
-  transform: scale(1.05);
-}
-
-/* FORMULARIO PROFESIONAL */
+/* ==========================
+   FORMULARIO CONTACTO
+========================== */
 .formulario-contacto-pro {
-  background: linear-gradient(145deg, #ffffff, #f0f4f8);
-  padding: 3rem;
+  background: linear-gradient(145deg, #f9fafb, #ffffff); /* Fondo clarito con degradado sutil */
+  padding: 2.5rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-  max-width: 650px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  max-width: 600px;
+  width: 90%;
   margin: 2rem auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario-contacto-pro:hover {
   transform: translateY(-5px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
 }
 
 .form-grupo {
@@ -263,13 +130,14 @@ iframe {
 .form-grupo input,
 .form-grupo textarea {
   width: 100%;
-  padding: 1rem 1rem 1rem 2.5rem; /* espacio para icono */
+  padding: 1rem 1rem 1rem 2.5rem; /* espacio para iconos */
   border-radius: 12px;
   border: 1px solid #d1d5db;
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
-  background: #fff;
+  background: #ffffff; /* Fondo blanco de inputs */
+  box-sizing: border-box;
 }
 
 .form-grupo textarea {
@@ -290,7 +158,7 @@ iframe {
   gap: 0.5rem;
 }
 
-/* Labels flotantes */
+/* Labels flotantes al escribir o enfocar */
 .form-grupo input:focus + label,
 .form-grupo input:not(:placeholder-shown) + label,
 .form-grupo textarea:focus + label,
@@ -299,11 +167,10 @@ iframe {
   left: 1rem;
   font-size: 0.85rem;
   color: #2563eb;
-  background: #ffffff;
+  background: #f9fafb; /* coincide con el fondo del formulario */
   padding: 0 0.25rem;
 }
 
-/* Iconos dentro de inputs */
 .form-grupo i {
   color: #2563eb;
 }
@@ -315,7 +182,7 @@ iframe {
   box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
 }
 
-/* Botón con gradiente y efecto hover */
+/* Botón */
 .boton-enviar {
   background: linear-gradient(90deg, #2563eb, #3b82f6);
   color: white;

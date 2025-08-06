@@ -107,7 +107,7 @@ iframe {
    FORMULARIO CONTACTO
 ========================== */
 .formulario-contacto-pro {
-  background: linear-gradient(145deg, #f9fafb, #ffffff); /* Fondo clarito con degradado sutil */
+  background: linear-gradient(145deg, #f9fafb, #dc9dd5); /* Fondo clarito con degradado sutil */
   padding: 2.5rem 2rem;
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);

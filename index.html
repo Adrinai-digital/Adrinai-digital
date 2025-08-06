@@ -57,36 +57,43 @@
   <section id="portafolio" class="portafolio">
   <div class="container">
     <h2>Portafolio</h2>
-    <div class="grid">
-      <!-- Proyecto 1 -->
-      <div class="card">
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="frontend">Frontend</button>
+      <button class="filtro-btn" data-filtro="fullstack">Full Stack</button>
+    </div>
+
+    <!-- Proyectos -->
+    <div class="grid portafolio-grid">
+      <div class="card frontend">
         <a href="https://adrinai-digital.github.io/elsabordeyei.github.io/" target="_blank">
           <img src="images/proyecto1.png" alt="Proyecto 1">
-          <h3>pasteleria Online</h3>
-          <p>Diseño frontend con HTML, CSS y JavaScript.</p>
+          <h3>Pasteleria online</h3>
+          <p>HTML, CSS, JavaScript.</p>
         </a>
       </div>
 
-      <!-- Proyecto 2 -->
-      <div class="card">
+      <div class="card frontend">
         <a href="https://yogadrinai.github.io/" target="_blank">
           <img src="images/proyecto2.png" alt="Proyecto 2">
-          <h3>escuela de yoga infantil</h3>
-          <p>Interfaz limpia y animaciones con JavaScript.</p>
+          <h3>Escuela de Yoga Infantil</h3>
+          <p>HTML, CSS, JavaScript.</p>
         </a>
       </div>
 
-      <!-- Proyecto 3 -->
-      <div class="card">
+      <div class="card fullstack">
         <a href="https://autoconocimientoygratitud.com/" target="_blank">
           <img src="images/proyecto3.png" alt="Proyecto 3">
           <h3>Escuela Online</h3>
-          <p>Frontend con HTML/CSS y backend con Node.js + Express.</p>
+          <p>Frontend + Backend (Node.js y Express)</p>
         </a>
       </div>
     </div>
   </div>
 </section>
+
 
   <section id="contacto" class="contacto">
     <div class="container">
@@ -128,5 +135,28 @@
       once: true,
     });
   </script>
+  <script>
+  const botonesFiltro = document.querySelectorAll(".filtro-btn");
+  const proyectos = document.querySelectorAll(".portafolio .card");
+
+  botonesFiltro.forEach(boton => {
+    boton.addEventListener("click", () => {
+      // Marcar botón activo
+      botonesFiltro.forEach(btn => btn.classList.remove("activo"));
+      boton.classList.add("activo");
+
+      const filtro = boton.dataset.filtro;
+
+      proyectos.forEach(proyecto => {
+        if (filtro === "todos" || proyecto.classList.contains(filtro)) {
+          proyecto.style.display = "block";
+        } else {
+          proyecto.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

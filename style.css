@@ -228,3 +228,27 @@ iframe {
   background: linear-gradient(90deg, #1e40af, #2563eb);
   transform: scale(1.05);
 }
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background-color: var(--light);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.filtro-btn:hover,
+.filtro-btn.activo {
+  background-color: var(--accent);
+  color: white;
+}

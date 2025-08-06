@@ -36,10 +36,18 @@ nav a {
 }
 
 .hero {
-  background: var(--accent);
+  background-image: url('/images/adriani\ digital.png'); /* ← cambia esto por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding: 4rem 0;
   text-align: center;
+  min-height: 100vh; /* opcional: asegura que cubra toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .servicios, .portafolio, .contacto {

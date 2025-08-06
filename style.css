@@ -12,9 +12,16 @@ body {
 }
 
 header {
-  background: var(--primary);
+  background: rgba(17, 24, 39, 0.85); /* var(--primary) con 85% opacidad */
   color: white;
   padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(6px); /* Soporte para Safari */
+  backdrop-filter: blur(6px);       /* suaviza el fondo detrás */
 }
 
 .container {
@@ -40,7 +47,7 @@ nav a {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  height: 40vh;                        /* Cambia de 100vh a 60vh */
+  height: 50vh;                        /* Cambia de 100vh a 60vh */
   display: flex;
   flex-direction: column;
   justify-content: center;

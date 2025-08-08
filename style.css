@@ -172,17 +172,20 @@ footer {
   transform: scale(1.2);          /* Ligeramente más grande al pasar el ratón */
 }
 
-.footer-contacto a {
-  color: white;                  /* Blanco puro para máximo contraste */
-  font-size: 1.3rem;              /* Tamaño un poco más grande */
-  margin: 0 8px;
+.footer-contacto a,
+.footer-contacto a i {
+  color: white !important; /* Blanco puro y forzado */
+  font-size: 1.1rem;
+  text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footer-contacto a:hover {
-  color: var(--primary);          /* Cambia al lila de tu paleta */
-  transform: scale(1.2);          /* Ligeramente más grande al pasar el ratón */
+.footer-contacto a:hover,
+.footer-contacto a:hover i {
+  color: var(--primary) !important; /* Lila de tu paleta */
+  transform: scale(1.05);
 }
+
 img {
   max-width: 100%;
   height: auto;

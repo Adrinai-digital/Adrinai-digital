@@ -160,7 +160,17 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+.footer-redes a {
+  color: white;                  /* Blanco puro para máximo contraste */
+  font-size: 1.3rem;              /* Tamaño un poco más grande */
+  margin: 0 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.footer-redes a:hover {
+  color: var(--primary);          /* Cambia al lila de tu paleta */
+  transform: scale(1.2);          /* Ligeramente más grande al pasar el ratón */
+}
 img {
   max-width: 100%;
   height: auto;

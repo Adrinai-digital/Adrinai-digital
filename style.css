@@ -380,3 +380,85 @@ iframe {
   color: #555;
   padding: 0 15px 20px;
 }
+/* ==========================
+   RESPONSIVE - TABLET
+   ========================== */
+@media (max-width: 1024px) {
+  /* Header: menú en columna */
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero {
+    height: 60vh;
+    padding: 0 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Menos padding en secciones */
+  .servicios, .portafolio, .contacto {
+    padding: 2rem 0;
+  }
+}
+
+/* ==========================
+   RESPONSIVE - MÓVIL
+   ========================== */
+@media (max-width: 768px) {
+  /* Header fijo y texto centrado */
+  header .container {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Hero: texto más pequeño */
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Filtros en columna */
+  .filtros {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Formularios 100% ancho */
+  .formulario-contacto-pro {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  /* Footer en columna */
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  footer .footer-contacto,
+  footer .footer-redes {
+    text-align: center;
+  }
+}

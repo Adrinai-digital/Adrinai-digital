@@ -416,15 +416,14 @@ iframe {
     align-items: center;
   }
 
-  .hero {
-    height: 60vh;
-    padding: 0 1rem;
+.hero {
+    height: 60vh;             /* Menos alto en tablets */
+    padding: 0 1rem;          /* Padding lateral */
+    background-position: center top; /* Evita cortes feos */
   }
-
   .hero h2 {
     font-size: 2rem;
   }
-
   .hero p {
     font-size: 1.1rem;
   }
@@ -455,14 +454,17 @@ iframe {
   }
 
   /* Hero: texto más pequeño */
-  .hero h2 {
-    font-size: 1.6rem;
+  .hero {
+    height: 50vh;             /* Ajusta en móviles */
+    background-position: top center; 
+    padding: 0 1rem;
   }
-
+  .hero h2 {
+    font-size: 1.4rem;
+  }
   .hero p {
     font-size: 1rem;
   }
-
   /* Filtros en columna */
   .filtros {
     flex-direction: column;

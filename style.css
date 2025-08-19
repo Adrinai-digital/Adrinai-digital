@@ -417,17 +417,20 @@ iframe {
     gap: 1rem;
     align-items: center;
   }
+}
+@media (max-width: 1024px) {
+  .hero {
+    background-size: contain;       /* muestra la imagen entera */
+    background-repeat: no-repeat;   /* evita que se repita */
+    background-position: center top; /* ajusta el enfoque */
+    background-color: #1e1e2f;      /* relleno en los bordes */
+    height: auto;                   /* deja crecer según la proporción */
+    padding: 4rem 1rem;             /* espacio para el texto */
+  }
 
-.hero {
-    height: 60vh;             /* Menos alto en tablets */
-    padding: 0 1rem;          /* Padding lateral */
-    background-position: center top; /* Evita cortes feos */
-  }
-  .hero h2 {
-    font-size: 2rem;
-  }
+  .hero h2, 
   .hero p {
-    font-size: 1.1rem;
+    color: #fff; /* asegúrate de que siga siendo legible */
   }
 
   /* Menos padding en secciones */

@@ -419,6 +419,9 @@ iframe {
   color: #555;
   padding: 0 15px 20px;
 }
+.menu-toggle {
+  display: none; /* oculto por defecto */
+}
 /* ==========================
    RESPONSIVE - TABLET & MÓVIL
    ========================== */
@@ -554,6 +557,7 @@ iframe {
   }
 }
 
+
 /* Ajustes extra para móviles pequeños (≤480px) */
 @media (max-width: 480px) {
   .hero-texto h1 {
@@ -570,5 +574,20 @@ iframe {
 
   nav ul {
     gap: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-texto {
+    position: static;   /* quita absolute */
+    margin: 15px auto;  /* centra con margen */
+    max-width: 90%;     /* ancho responsivo */
+    text-align: center; /* texto centrado */
+  }
+
+  .hero {
+    height: auto;       /* que se adapte al contenido */
+    padding: 3rem 1rem; /* más espacio arriba y abajo */
+    background-size: cover;
+    background-position: center top;
   }
 }

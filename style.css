@@ -473,17 +473,46 @@ iframe {
 
   /* Hero: texto más pequeño */
   .hero {
-    height: 50vh;             /* Ajusta en móviles */
-    background-position: top center; 
-    padding: 0 1rem;
-  }
-  .hero-texto h2 {
-    font-size: 2.2rem;
-  }
+  position: relative;
+  width: 100%;
+  text-align: center; /* centra el texto debajo de la imagen */
+}
 
-  .hero-texto p {
-    font-size: 1rem;
-  }
+.hero-img {
+  width: 100%;
+  height: auto; /* mantiene la proporción de la imagen */
+  display: block;
+}
+
+.hero-texto {
+  margin-top: -100px; /* ajusta para que el texto quede sobre la parte inferior de la imagen */
+  background: rgba(0, 0, 0, 0.6); /* fondo negro translúcido */
+  color: #fff;
+  display: inline-block; /* ajusta el ancho al contenido */
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.hero-texto h2 {
+  margin: 0 0 10px;
+}
+
+.hero-texto p {
+  margin: 0 0 15px;
+}
+
+.boton-container {
+  text-align: center;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
   /* Filtros en columna */
   .filtros {
     flex-direction: column;

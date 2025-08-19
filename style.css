@@ -509,33 +509,36 @@ header .container {
 
 /* Menú móvil/tablet cerrado por defecto */
 @media (max-width: 1024px) {
-  #main-nav {
+ header h1 {
     display: none;
+  }
+
+  #main-nav {
     position: absolute;
-    top: 60px;             /* justo debajo del header */
+    top: 60px; /* debajo del header */
     left: 0;
     width: 100%;
     background: rgba(30, 30, 47, 0.95);
     text-align: center;
-    padding: 1rem 0;
-    /* pequeña animación de despliegue */
-    max-height: 0;
+    padding: 0; 
+    max-height: 0;         /* cerrado por defecto */
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s ease;
   }
 
-  /* Mostrar botón en móviles/tablets */
-  .menu-toggle { display: block; }
+  /* Menú abierto */
+  body.nav-open #main-nav {
+    max-height: 300px; /* suficiente para 3-4 enlaces */
+    padding: 1rem 0;
+  }
 
-  /* Lista en columna */
   #main-nav ul {
     flex-direction: column;
     gap: 1rem;
   }
 
-  /* Cuando el body tiene la clase nav-open, mostramos el menú */
-  body.nav-open #main-nav {
+  /* Botón hamburguesa visible */
+  .menu-toggle {
     display: block;
-    max-height: 400px; /* suficiente para tus 3 links */
   }
 }

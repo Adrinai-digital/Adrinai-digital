@@ -194,38 +194,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('main-nav');
   const icon = toggleBtn.querySelector('i');
 
-  // Abrir/cerrar
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
     const isOpen = document.body.classList.contains('nav-open');
-    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 
-    // Cambiar icono (bars ↔ xmark)
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+
+    // Cambiar icono (hamburguesa ↔ X)
     icon.classList.toggle('fa-bars', !isOpen);
-    icon.classList.toggle('fa-xmark', isOpen); // (en FA6 es fa-xmark)
+    icon.classList.toggle('fa-xmark', isOpen);
   });
 
-  // Cerrar al hacer click en cualquier enlace del menú
-  nav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
+  // Cerrar al hacer click en un enlace
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
       document.body.classList.remove('nav-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-expanded', false);
       icon.classList.add('fa-bars');
       icon.classList.remove('fa-xmark');
     });
   });
-
-  // Opcional: si se vuelve a escritorio, asegúrate de dejar todo limpio
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024) {
-      document.body.classList.remove('nav-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      icon.classList.add('fa-bars');
-      icon.classList.remove('fa-xmark');
-    }
-  });
 });
 </script>
+
 
 </body>
 </html>

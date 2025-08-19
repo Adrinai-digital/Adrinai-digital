@@ -45,23 +45,37 @@ nav a {
   position: relative;
   text-align: center;
   overflow: hidden;
+  background: #000; /* color de fondo en caso de bandas */
 }
 
-/* Imagen siempre completa a lo ancho */
+/* Imagen siempre visible completa */
 .hero-img {
-  width: 100%;
-  height: auto;      /* mantiene proporción */
+  width: 100%;       /* ocupa todo el ancho */
+  height: auto;      /* alto proporcional */
   display: block;
 }
 
-/* Texto centrado encima */
+/* Overlay oscuro para que el texto sea legible */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Texto centrado sobre la imagen */
 .hero-texto {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #fff;
+  z-index: 2;
+  padding: 1rem;
+  max-width: 90%;
 }
+
 
 .hero::before {
   content: "";

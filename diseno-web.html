@@ -118,5 +118,63 @@ display: block;
   <footer class="container">
     <p>&copy; 2025 Agencia-Digital. Todos los derechos reservados.</p>
   </footer>
+  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <script>
+  const botonesFiltro = document.querySelectorAll(".filtro-btn");
+  const proyectos = document.querySelectorAll(".portafolio .card");
+
+  botonesFiltro.forEach(boton => {
+    boton.addEventListener("click", () => {
+      // Marcar botón activo
+      botonesFiltro.forEach(btn => btn.classList.remove("activo"));
+      boton.classList.add("activo");
+
+      const filtro = boton.dataset.filtro;
+
+      proyectos.forEach(proyecto => {
+        if (filtro === "todos" || proyecto.classList.contains(filtro)) {
+          proyecto.style.display = "block";
+        } else {
+          proyecto.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  const icon = toggleBtn.querySelector('i');
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+    const isOpen = document.body.classList.contains('nav-open');
+
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+
+    // Cambiar icono (hamburguesa ↔ X)
+    icon.classList.toggle('fa-bars', !isOpen);
+    icon.classList.toggle('fa-xmark', isOpen);
+  });
+
+  // Cerrar al hacer click en un enlace
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+      toggleBtn.setAttribute('aria-expanded', false);
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+});
+</script>
 </body>
 </html>
